@@ -2,7 +2,7 @@
 
 Portfolio website showcasing my work as a Fullstack Web Developer with 10+ years of experience.
 
-## Tech Stack
+<div align="center">
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.1.0-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue?style=for-the-badge&logo=typescript&logoColor=white)
@@ -13,3 +13,5 @@ Portfolio website showcasing my work as a Fullstack Web Developer with 10+ years
 ![Zod](https://img.shields.io/badge/Zod-3.25.76-3E63DD?style=for-the-badge&logo=zod&logoColor=white)
 ![React Hook Form](https://img.shields.io/badge/React_Hook_Form-7.61.1-EC5990?style=for-the-badge&logo=react-hook-form&logoColor=white)
 ![TanStack Query](https://img.shields.io/badge/TanStack_Query-5.83.0-FF4154?style=for-the-badge&logo=react-query&logoColor=white)
+
+</div>
