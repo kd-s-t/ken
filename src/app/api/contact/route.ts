@@ -14,7 +14,7 @@ function getClientIP(request: NextRequest): string {
     return realIP;
   }
   
-  return request.ip || "unknown";
+  return "unknown";
 }
 
 export async function POST(request: NextRequest) {
@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     }
 
     const ipAddress = getClientIP(request);
-    let geoData = { country: undefined, location: undefined };
+    let geoData: { country?: string; location?: string } = { country: undefined, location: undefined };
     
     try {
       geoData = await getGeoData(ipAddress);

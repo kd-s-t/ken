@@ -139,7 +139,7 @@ export default function AnalyticsPage() {
                   cy="50%"
                   labelLine={false}
                   label={({ type, percent }) => {
-                    const formattedType = type.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+                    const formattedType = type.split('_').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
                     return `${formattedType}: ${(percent * 100).toFixed(0)}%`;
                   }}
                   outerRadius={80}
