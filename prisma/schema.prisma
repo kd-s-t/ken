@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Visitor {
+  id            String   @id @default(cuid())
+  ipAddress     String
+  country       String?
+  location      String?
+  gender        String?
+  sessionId     String
+  visitStart    DateTime @default(now())
+  visitEnd      DateTime?
+  duration      Int?     // Duration in seconds
+  userAgent     String?
+  referer       String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([ipAddress])
+  @@index([sessionId])
+  @@index([createdAt])
+}
+
+model ResumeDownload {
+  id            String   @id @default(cuid())
+  ipAddress     String
+  country       String?
+  location      String?
+  userAgent     String?
+  referer       String?
+  downloadedAt  DateTime @default(now())
+  emailSent     Boolean  @default(false)
+
+  @@index([ipAddress])
+  @@index([downloadedAt])
+}
+
+model Interaction {
+  id            String   @id @default(cuid())
+  type          String   // button_click, link_click, form_submit, section_view, etc.
+  action        String   // specific action like "view_work", "github_click", "contact_submit"
+  element       String?  // element identifier (button text, link URL, etc.)
+  metadata      String?  // JSON string for additional data
+  ipAddress     String
+  country       String?
+  location      String?
+  sessionId     String
+  userAgent     String?
+  referer       String?
+  url           String?
+  timestamp     DateTime @default(now())
+
+  @@index([type])
+  @@index([action])
+  @@index([sessionId])
+  @@index([timestamp])
+  @@index([ipAddress])
+}
