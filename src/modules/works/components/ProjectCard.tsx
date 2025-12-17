@@ -36,6 +36,7 @@ const ProjectCard = ({ title, description, tags, liveUrl, githubUrl, image, inde
         <Image
           src={image}
           alt={title}
+          style={{padding:40}}
           fill
           className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
         />

@@ -71,10 +71,10 @@ const Contact = () => {
         <div className="text-center mb-16">
           <p className="text-primary font-mono text-sm mb-2">GET IN TOUCH</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Let's Work Together
+            Let&apos;s Work Together
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Send me a message and let's create something amazing.
+            Have a project in mind? I&apos;d love to hear about it. Send me a message and let&apos;s create something amazing.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ const Contact = () => {
               style={{ background: "var(--gradient-card)" }}
             >
               <p className="text-muted-foreground italic">
-                "I'm always excited to connect with fellow developers, potential clients, or anyone interested in creating impactful digital experiences."
+                &quot;I&apos;m always excited to connect with fellow developers, potential clients, or anyone interested in creating impactful digital experiences.&quot;
               </p>
             </div>
           </div>
