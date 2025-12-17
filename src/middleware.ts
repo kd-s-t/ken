@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
     
     // Allowed origins
     const allowedOrigins = [
-      "https://ken-git-main-kd-s-ts-projects.vercel.app",
+      "https://ken-liard.vercel.app",
       "https://ken.vercel.app", // Add your production domain if different
       "http://localhost:3025", // Local development
       "http://localhost:3000", // Default Next.js port
